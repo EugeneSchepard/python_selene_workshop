@@ -8,6 +8,7 @@ python:
   - "3.5"
 
 before_install:
+  - sudo pip install tox
   - sudo apt-get update -qq
   - sudo apt-get -y -o Dpkg::Options::=--force-confdef -o Dpkg::Options::=--force-confnew install docker-engine
   - export CHROME_BIN=/usr/bin/google-chrome
