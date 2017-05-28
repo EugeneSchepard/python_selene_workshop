@@ -7,7 +7,7 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=root
   video_service:
-    image: video_service
+    image: spirogov/video_service
     links:
       - mysql
     ports:
