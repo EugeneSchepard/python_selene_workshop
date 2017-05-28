@@ -171,3 +171,5 @@ Run tests:
 ```
 ./run.sh
 ```
+
+Travis integration
