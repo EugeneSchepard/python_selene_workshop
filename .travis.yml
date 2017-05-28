@@ -8,6 +8,7 @@ python:
   - "3.5"
 
 before_install:
+  - chmod +x .upload_reports.sh
   - sudo pip install tox
   - sudo apt-get update -qq
   - sudo apt-get -y -o Dpkg::Options::=--force-confdef -o Dpkg::Options::=--force-confnew install docker-engine
@@ -22,6 +23,8 @@ before_install:
 
 script:
   - tox
+
+after_script: "./.upload_reports.sh"
 
 notifications:
   email:
