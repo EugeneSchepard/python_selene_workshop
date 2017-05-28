@@ -8,8 +8,6 @@ python:
   - "3.5"
 
 before_install:
-  - sudo chmod +x ./install.sh
-  - sudo chmod +x ./run.sh
   - sudo apt-get update -qq
   - sudo apt-get -y -o Dpkg::Options::=--force-confdef -o Dpkg::Options::=--force-confnew install docker-engine
   - export CHROME_BIN=/usr/bin/google-chrome
@@ -22,8 +20,7 @@ before_install:
   - "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1280x1024x16"
 
 script:
-  - ./install.sh
-  - ./run.sh
+  - tox
 
 notifications:
   email:
