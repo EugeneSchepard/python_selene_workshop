@@ -1,0 +1,5 @@
+{
+  "test_login.py::test_user_can_login_and_logout": true,
+  "test_login.py::test_user_can_not_login_with_invalid_credentials": true,
+  "test_users.py::test_can_add_new_user": true
+}

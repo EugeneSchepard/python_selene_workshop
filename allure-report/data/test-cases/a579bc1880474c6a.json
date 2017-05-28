@@ -1,0 +1,41 @@
+{
+  "uid" : "a579bc1880474c6a",
+  "name" : "test_can_add_new_user",
+  "fullName" : "tests.test_users#test_can_add_new_user",
+  "testCaseId" : "79d87914fc1b4656341df0b23355dd07",
+  "time" : {
+    "start" : 1495974866035,
+    "stop" : 1495974895474,
+    "duration" : 29439
+  },
+  "status" : "failed",
+  "statusDetails" : {
+    "message" : "no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome=58.0.3029.110)\n  (Driver info: chromedriver=2.29.461571 (8a88bbe0775e2a23afda0ceaf2ef7ee74e822cc5),platform=Linux 4.4.0-78-generic x86_64)",
+    "flaky" : false
+  },
+  "beforeStages" : [ {
+    "name" : "setup",
+    "time" : {
+      "start" : 1495974855513,
+      "stop" : 1495974856147,
+      "duration" : 634
+    },
+    "status" : "unknown",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ]
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "tests.test_users"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "extra" : {
+    "severity" : "normal",
+    "categories" : [ {
+      "name" : "Unknown failure"
+    } ]
+  }
+}

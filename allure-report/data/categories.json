@@ -1,0 +1,104 @@
+{
+  "statistic" : {
+    "failed" : 2,
+    "broken" : 0,
+    "skipped" : 0,
+    "passed" : 0,
+    "unknown" : 0,
+    "total" : 2
+  },
+  "time" : {
+    "minDuration" : 8735,
+    "maxDuration" : 29439,
+    "sumDuration" : 38174,
+    "start" : 1495974856148,
+    "stop" : 1495974895474,
+    "duration" : 39326
+  },
+  "children" : [ {
+    "uid" : "c240a2034efa86b6",
+    "name" : "Unknown failure",
+    "time" : {
+      "minDuration" : 8735,
+      "maxDuration" : 29439,
+      "sumDuration" : 38174,
+      "start" : 1495974856148,
+      "stop" : 1495974895474,
+      "duration" : 39326
+    },
+    "statistic" : {
+      "failed" : 2,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 2
+    },
+    "type" : "TestGroupNode",
+    "children" : [ {
+      "uid" : "949ed0ce0700320b",
+      "name" : "no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome=58.0.3029.110)\n  (Driver info: chromedriver=2.29.461571 (8a88bbe0775e2a23afda0ceaf2ef7ee74e822cc5),platform=Linux 4.4.0-78-generic x86_64)",
+      "time" : {
+        "minDuration" : 29439,
+        "maxDuration" : 29439,
+        "sumDuration" : 29439,
+        "start" : 1495974866035,
+        "stop" : 1495974895474,
+        "duration" : 29439
+      },
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 1
+      },
+      "type" : "TestGroupNode",
+      "children" : [ {
+        "uid" : "a579bc1880474c6a",
+        "name" : "test_can_add_new_user",
+        "time" : {
+          "start" : 1495974866035,
+          "stop" : 1495974895474,
+          "duration" : 29439
+        },
+        "status" : "failed",
+        "flaky" : false,
+        "type" : "TestCaseNode"
+      } ]
+    }, {
+      "uid" : "c3071a5a7bfc7324",
+      "name" : "\n            failed while waiting 4 seconds\n            to assert ExactText\n            for first_by('css selector', '#parent > form > div:nth-child(2) > div > div > ul > li')\n\n            reason: ConditionMismatchException: condition did not match\n            \texpected: Field is required. Minimum 6 symbols length\n            \t  actual: Field is required. Minimum 4 symbols length\n            screenshot: file:///home/sergey/.selene/screenshots/1495974855173/screen_1495974855174.png",
+      "time" : {
+        "minDuration" : 8735,
+        "maxDuration" : 8735,
+        "sumDuration" : 8735,
+        "start" : 1495974856148,
+        "stop" : 1495974864883,
+        "duration" : 8735
+      },
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 1
+      },
+      "type" : "TestGroupNode",
+      "children" : [ {
+        "uid" : "92fa74fec9bc82f5",
+        "name" : "test_user_can_not_login_with_invalid_credentials",
+        "time" : {
+          "start" : 1495974856148,
+          "stop" : 1495974864883,
+          "duration" : 8735
+        },
+        "status" : "failed",
+        "flaky" : false,
+        "type" : "TestCaseNode"
+      } ]
+    } ]
+  } ]
+}

@@ -1,0 +1,1 @@
+{"name": "test_user_can_login_and_logout", "stop": 1495974866033, "labels": [{"name": "package", "value": "tests.test_login"}], "start": 1495974865016, "status": "passed", "uuid": "b1771476-2664-4a6c-8748-cc96aab9f714", "fullName": "tests.test_login#test_user_can_login_and_logout", "historyId": "c8d459eeb0702a9755166813edb10b5e"}

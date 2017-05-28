@@ -1,0 +1,41 @@
+{
+  "uid" : "92fa74fec9bc82f5",
+  "name" : "test_user_can_not_login_with_invalid_credentials",
+  "fullName" : "tests.test_login#test_user_can_not_login_with_invalid_credentials",
+  "testCaseId" : "d4048a8b5608ea36e31cda20edae9d9d",
+  "time" : {
+    "start" : 1495974856148,
+    "stop" : 1495974864883,
+    "duration" : 8735
+  },
+  "status" : "failed",
+  "statusDetails" : {
+    "message" : "\n            failed while waiting 4 seconds\n            to assert ExactText\n            for first_by('css selector', '#parent > form > div:nth-child(2) > div > div > ul > li')\n\n            reason: ConditionMismatchException: condition did not match\n            \texpected: Field is required. Minimum 6 symbols length\n            \t  actual: Field is required. Minimum 4 symbols length\n            screenshot: file:///home/sergey/.selene/screenshots/1495974855173/screen_1495974855174.png",
+    "flaky" : false
+  },
+  "beforeStages" : [ {
+    "name" : "setup",
+    "time" : {
+      "start" : 1495974855513,
+      "stop" : 1495974856147,
+      "duration" : 634
+    },
+    "status" : "unknown",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ]
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "tests.test_login"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "extra" : {
+    "severity" : "normal",
+    "categories" : [ {
+      "name" : "Unknown failure"
+    } ]
+  }
+}

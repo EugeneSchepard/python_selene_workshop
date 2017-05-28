@@ -1,0 +1,94 @@
+{
+  "statistic" : {
+    "failed" : 2,
+    "broken" : 0,
+    "skipped" : 0,
+    "passed" : 1,
+    "unknown" : 0,
+    "total" : 3
+  },
+  "time" : {
+    "minDuration" : 1017,
+    "maxDuration" : 29439,
+    "sumDuration" : 39191,
+    "start" : 1495974856148,
+    "stop" : 1495974895474,
+    "duration" : 39326
+  },
+  "children" : [ {
+    "uid" : "6704b38dca89db13",
+    "name" : "Default feature",
+    "time" : {
+      "minDuration" : 1017,
+      "maxDuration" : 29439,
+      "sumDuration" : 39191,
+      "start" : 1495974856148,
+      "stop" : 1495974895474,
+      "duration" : 39326
+    },
+    "statistic" : {
+      "failed" : 2,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 3
+    },
+    "type" : "TestGroupNode",
+    "children" : [ {
+      "uid" : "8ac58b343fbfbfdc",
+      "name" : "Default story",
+      "time" : {
+        "minDuration" : 1017,
+        "maxDuration" : 29439,
+        "sumDuration" : 39191,
+        "start" : 1495974856148,
+        "stop" : 1495974895474,
+        "duration" : 39326
+      },
+      "statistic" : {
+        "failed" : 2,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "type" : "TestGroupNode",
+      "children" : [ {
+        "uid" : "a579bc1880474c6a",
+        "name" : "test_can_add_new_user",
+        "time" : {
+          "start" : 1495974866035,
+          "stop" : 1495974895474,
+          "duration" : 29439
+        },
+        "status" : "failed",
+        "flaky" : false,
+        "type" : "TestCaseNode"
+      }, {
+        "uid" : "e0e7f3d5dac6fa54",
+        "name" : "test_user_can_login_and_logout",
+        "time" : {
+          "start" : 1495974865016,
+          "stop" : 1495974866033,
+          "duration" : 1017
+        },
+        "status" : "passed",
+        "flaky" : false,
+        "type" : "TestCaseNode"
+      }, {
+        "uid" : "92fa74fec9bc82f5",
+        "name" : "test_user_can_not_login_with_invalid_credentials",
+        "time" : {
+          "start" : 1495974856148,
+          "stop" : 1495974864883,
+          "duration" : 8735
+        },
+        "status" : "failed",
+        "flaky" : false,
+        "type" : "TestCaseNode"
+      } ]
+    } ]
+  } ]
+}
