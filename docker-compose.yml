@@ -1,12 +1,19 @@
-version: '2'
+version: '2.1'
 services:
   mysql:
     image: mysql
+    ports:
+      - "3306:3306"
     environment:
       - MYSQL_ROOT_PASSWORD=root
+    healthcheck:
+      test: "exit 0"
   video_service:
     image: spirogov/video_service
     links:
       - mysql
     ports:
       - "8086:8086"
+    depends_on:
+      mysql:
+        condition: service_healthy
