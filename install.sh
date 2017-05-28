@@ -1,3 +1,4 @@
+sudo pip install pipenv
 pipenv --three
 pipenv install pytest
 pipenv install pytest-env
