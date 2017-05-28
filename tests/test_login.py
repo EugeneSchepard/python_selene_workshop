@@ -20,7 +20,8 @@ def test_user_can_login_and_logout(setup):
     main_page.logout()
     login.username_input.should(be.visible)
 
+
 # brutal fix for login =)
 
-# def teardown_module():
-#     browser.close()
+def teardown_module():
+    browser.close()
