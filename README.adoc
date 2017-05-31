@@ -1,38 +1,42 @@
 = Python 3 + Selene + Docker Tutorial
+:toc: left
+:toclevels: 4
 
 *Author:* Sergey Pirogov
 
 *Blog:* http://automation-remarks.com
 
-== Requirements:
+== Requirements
 
 - Python 3
 - Docker
 - Git
 
-=== Create project:
+== Start system under test
 
-----
-mkdir selene_demo
-----
+Use **docker** and **docker-compose**
 
-Start SUT using **docker** and **docker-compose**:
-
-1) Download docker-compose.yml file
+==== Download docker-compose.yml file
 
 ----
 curl -O https://raw.githubusercontent.com/SergeyPirogov/python-video-service/master/docker-compose.yml
 ----
 
-2) Start application
+==== Start application
 
 ----
 docker-compose up -d
 ----
 
-3) Check application started at http://localhost:8086
+Check application started at http://localhost:8086
 
-=== Install pipenv:
+== Create project
+
+----
+mkdir selene_demo
+----
+
+=== Install pipenv
 
 Pipenv docs: https://github.com/kennethreitz/pipenv
 
@@ -40,19 +44,19 @@ Pipenv docs: https://github.com/kennethreitz/pipenv
 pip install pipenv
 ```
 
-=== Create project virtualenv with python 3 installed:
+=== Create project virtualenv with python 3 installed
 
 ```
 pipenv --three
 ```
 
-=== Activate virtualenv:
+=== Activate virtualenv
 
 ```
 pipenv shell
 ```
 
-==== Required packages:
+=== Required packages
 
 - selene
 - pytest
@@ -60,7 +64,7 @@ pipenv shell
 - pytest-env
 - testcontainers
 
-==== Install Selene:
+==== Install selene
 
 Latest alfa release:
 
@@ -74,16 +78,32 @@ Latest development:
 pip install git+https://github.com/yashaka/selene.git
 ```
 
-==== Install pytest:
+==== Install pytest
 
 ```
 pip install pytest
 ```
 
-==== Install pytest-env:
+==== Install pytest-env
 
 ```
 pip install pytest-env
+```
+
+==== Install testcontainers
+
+https://github.com/SergeyPirogov/testcontainers-python
+
+Release version:
+
+```
+pip install testcontainers
+```
+
+Development version:
+
+```
+pip install git+https://github.com/SergeyPirogov/testcontainers-python.git
 ```
 
 === Open project in Pycharm
@@ -109,7 +129,7 @@ Start creation of page object modules under under **pages** package:
 
 Describe page objects
 
-==== Run tests in console:
+==== Run tests in console
 
 ```
 pytest -sv tests/
@@ -121,30 +141,18 @@ You can specify env variables:
 selene_browser_name=chrome pytest -sv tests/
 ```
 
-==== Install testcontainers:
-
-https://github.com/SergeyPirogov/testcontainers-python
-
-Release version:
-
-```
-pip install testcontainers
-```
-
-Development version:
-
-```
-pip install git+https://github.com/SergeyPirogov/testcontainers-python.git
-```
-==== Install Allure adaptor:
+== Reports
+==== Install Allure adaptor
 
 ```
 pip install pytest-allure-adaptor
 ```
 
-==== Install [Allure command line](http://wiki.qatools.ru/display/AL/Allure+Commandline)
+==== Allure v1
 
-===== Generate allure1 report:
+Install http://wiki.qatools.ru/display/AL/Allure+Commandline[Allure command line]
+
+===== Generate report
 
 ```
 allure generate <folder>
@@ -152,14 +160,16 @@ allure generate <folder>
 
 *Open generated report:*
 
-==== Install allure2:
+=== Allure v2
 
 ```
 pip install git+https://github.com/allure-framework/allure-python2.git@master#subdirectory=allure-python-commons
 pip install git+https://github.com/allure-framework/allure-python2.git@master#subdirectory=allure-pytest
 ```
 
-===== Create run.sh in case of allure2:
+===== Generate report
+
+Create run.sh in case of allure2:
 
 ```
 #!/bin/bash
@@ -180,11 +190,11 @@ Run tests:
 ./run.sh
 ```
 
-=== Travis integration:
+=== Travis integration
 
 See file **.travis.yml** in the project root.
 
-=== Report portal integration:
+== Report portal integration
 
 Report Portal is a service, it provides great capabilities for speeding up results
 analysis and reporting by means of built-in analytical features.
@@ -196,7 +206,7 @@ Real-time integration allows to manage and track execution status directly from 
 
 http://reportportal.io/
 
-==== Install RP adaptor:
+==== Install RP adaptor
 
 ```
 pip install pytest-reportportal
