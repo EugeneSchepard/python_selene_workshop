@@ -148,6 +148,12 @@ Install Allure adaptor:
 pip install pytest-allure-adaptor
 ```
 
+Install Allure command line:
+
+```
+http://wiki.qatools.ru/display/AL/Allure+Commandline
+```
+
 Install allure2:
 
 ```
@@ -178,3 +184,4 @@ Run tests:
 ```
 
 Travis integration
+
