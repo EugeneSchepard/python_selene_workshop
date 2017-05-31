@@ -185,3 +185,28 @@ Travis integration:
 
 See file **.travis.yml** in the project root.
 
+Report portal integration:
+-------------------------
+
+Install RP adaptor:
+
+```
+pip install pytest-reportportal
+```
+
+pytest.ini
+```
+[pytest]
+rp_uuid = uid reportportal
+rp_endpoint = http://ip:port
+rp_project = video_portal
+```
+
+Run tests:
+
+```
+py.test ./tests --rp-launch selene_blog_test
+```
+
+That's all! Thank you =)
+
