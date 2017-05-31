@@ -180,5 +180,8 @@ Run tests:
 ./run.sh
 ```
 
-Travis integration
+Travis integration:
+------------------
+
+See file **.travis.yml** in the project root.
 
