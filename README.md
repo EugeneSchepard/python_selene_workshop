@@ -169,7 +169,7 @@ mkdir -p report
 
 rm -rf allure-report
 
-pytest tests --alluredir=report
+pytest tests
 
 allure_gen/bin/allure generate report
 ```
