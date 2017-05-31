@@ -142,6 +142,11 @@ Development version:
 ```
 pip install git+https://github.com/SergeyPirogov/testcontainers-python.git
 ```
+Install Allure adaptor:
+
+```
+pip install pytest-allure-adaptor
+```
 
 Install allure2:
 
@@ -150,7 +155,7 @@ pip install git+https://github.com/allure-framework/allure-python2.git@master#su
 pip install git+https://github.com/allure-framework/allure-python2.git@master#subdirectory=allure-pytest
 ```
 
-Create run.sh:
+Create run.sh in case of allure2:
 --------------
 
 ```
