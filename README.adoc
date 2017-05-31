@@ -16,13 +16,13 @@
 
 Use **docker** and **docker-compose**
 
-==== Download docker-compose.yml file
+=== Download docker-compose.yml file
 
 ----
 curl -O https://raw.githubusercontent.com/SergeyPirogov/python-video-service/master/docker-compose.yml
 ----
 
-==== Start application
+=== Start application
 
 ----
 docker-compose up -d
@@ -142,17 +142,17 @@ selene_browser_name=chrome pytest -sv tests/
 ```
 
 == Reports
-==== Install Allure adaptor
+=== Install Allure adaptor
 
 ```
 pip install pytest-allure-adaptor
 ```
 
-==== Allure v1
+=== Allure v1
 
 Install http://wiki.qatools.ru/display/AL/Allure+Commandline[Allure command line]
 
-===== Generate report
+==== Generate report
 
 ```
 allure generate <folder>
@@ -167,7 +167,7 @@ pip install git+https://github.com/allure-framework/allure-python2.git@master#su
 pip install git+https://github.com/allure-framework/allure-python2.git@master#subdirectory=allure-pytest
 ```
 
-===== Generate report
+==== Generate report
 
 Create run.sh in case of allure2:
 
@@ -206,7 +206,7 @@ Real-time integration allows to manage and track execution status directly from 
 
 http://reportportal.io/
 
-==== Install RP adaptor
+=== Install RP adaptor
 
 ```
 pip install pytest-reportportal
