@@ -148,11 +148,8 @@ Install Allure adaptor:
 pip install pytest-allure-adaptor
 ```
 
-Install Allure command line:
+Install [Allure command line](http://wiki.qatools.ru/display/AL/Allure+Commandline)
 
-```
-http://wiki.qatools.ru/display/AL/Allure+Commandline
-```
 
 Install allure2:
 
