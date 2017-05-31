@@ -1,40 +1,38 @@
-Python 3 + Selene + Docker Tutorial
-===================================
-Author: Sergey Pirogov
-blog: http://automation-remarks.com
+= Python 3 + Selene + Docker Tutorial
 
-Requirements: 
--------------
+*Author:* Sergey Pirogov
+
+*Blog:* http://automation-remarks.com
+
+== Requirements:
 
 - Python 3
 - Docker
 - Git
 
-Create project:
----------------
+=== Create project:
 
-```
+----
 mkdir selene_demo
-```
+----
 
 Start SUT using **docker** and **docker-compose**:
 
 1) Download docker-compose.yml file
 
-```
+----
 curl -O https://raw.githubusercontent.com/SergeyPirogov/python-video-service/master/docker-compose.yml
-```
+----
 
 2) Start application
- 
-```
+
+----
 docker-compose up -d
-```
+----
 
 3) Check application started at http://localhost:8086
 
-Install pipenv:
----------------
+=== Install pipenv:
 
 Pipenv docs: https://github.com/kennethreitz/pipenv
 
@@ -42,22 +40,19 @@ Pipenv docs: https://github.com/kennethreitz/pipenv
 pip install pipenv
 ```
 
-Create project virtualenv with python 3 installed:
---------------------------------------------------
+=== Create project virtualenv with python 3 installed:
 
 ```
 pipenv --three
 ```
 
-Activate virtualenv:
---------------------
+=== Activate virtualenv:
 
 ```
 pipenv shell
 ```
 
-Required packages:
-------------------
+==== Required packages:
 
 - selene
 - pytest
@@ -65,7 +60,7 @@ Required packages:
 - pytest-env
 - testcontainers
 
-Install Selene:
+==== Install Selene:
 
 Latest alfa release:
 
@@ -79,34 +74,34 @@ Latest development:
 pip install git+https://github.com/yashaka/selene.git
 ```
 
-Install pytest:
+==== Install pytest:
 
 ```
 pip install pytest
 ```
 
-Install pytest-env:
+==== Install pytest-env:
 
 ```
 pip install pytest-env
 ```
 
-**Open project in Pycharm**
+=== Open project in Pycharm
 
 Create python packages **src** and **tests**.
-    
+
 Under **src** create python module package **pages**
 
 Create file **pytest.ini**:
-    
+
 ```
 [pytest]
 addopts = --tb=short -sv
 env =
     selene_browser_name=chrome
-    selene_base_url=http://localhost:8086    
+    selene_base_url=http://localhost:8086
 ```
-    
+
 Start creation of page object modules under under **pages** package:
 
 - login_page.py
@@ -114,10 +109,10 @@ Start creation of page object modules under under **pages** package:
 
 Describe page objects
 
-Run tests in console:
+==== Run tests in console:
 
 ```
-pytest -sv tests/ 
+pytest -sv tests/
 ```
 
 You can specify env variables:
@@ -126,8 +121,7 @@ You can specify env variables:
 selene_browser_name=chrome pytest -sv tests/
 ```
 
-Install testcontainers:
------------------------
+==== Install testcontainers:
 
 https://github.com/SergeyPirogov/testcontainers-python
 
@@ -142,31 +136,30 @@ Development version:
 ```
 pip install git+https://github.com/SergeyPirogov/testcontainers-python.git
 ```
-Install Allure adaptor:
+==== Install Allure adaptor:
 
 ```
 pip install pytest-allure-adaptor
 ```
 
-Install [Allure command line](http://wiki.qatools.ru/display/AL/Allure+Commandline)
+==== Install [Allure command line](http://wiki.qatools.ru/display/AL/Allure+Commandline)
 
-Generate allure1 report:
+===== Generate allure1 report:
 
 ```
 allure generate <folder>
 ```
 
-Open generated report
+*Open generated report:*
 
-Install allure2:
+==== Install allure2:
 
 ```
 pip install git+https://github.com/allure-framework/allure-python2.git@master#subdirectory=allure-python-commons
 pip install git+https://github.com/allure-framework/allure-python2.git@master#subdirectory=allure-pytest
 ```
 
-Create run.sh in case of allure2:
---------------
+===== Create run.sh in case of allure2:
 
 ```
 #!/bin/bash
@@ -187,15 +180,23 @@ Run tests:
 ./run.sh
 ```
 
-Travis integration:
-------------------
+=== Travis integration:
 
 See file **.travis.yml** in the project root.
 
-Report portal integration:
--------------------------
+=== Report portal integration:
 
-Install RP adaptor:
+Report Portal is a service, it provides great capabilities for speeding up results
+analysis and reporting by means of built-in analytical features.
+Report Portal is the great addition to the
+Continuous Integration and Continuous Testing process.
+It seamlessly integrates with mainstream platforms such as Jenkins, Jira,
+BDD process, majority of Functional and Unit testing frameworks.
+Real-time integration allows to manage and track execution status directly from Report Portal.
+
+http://reportportal.io/
+
+==== Install RP adaptor:
 
 ```
 pip install pytest-reportportal
@@ -216,4 +217,3 @@ py.test ./tests --rp-launch selene_blog_test
 ```
 
 That's all! Thank you =)
-
