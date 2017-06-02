@@ -206,6 +206,22 @@ Real-time integration allows to manage and track execution status directly from 
 
 http://reportportal.io/
 
+=== Start Report portal
+
+https://github.com/reportportal/reportportal
+
+```
+curl https://raw.githubusercontent.com/reportportal/reportportal/master/docker-compose.yml -o docker-compose.yml
+```
+
+```
+docker-compose up -d
+```
+
+Check *http://ip:8080*
+
+login\pass for access: *default\1q2w3e* and *superadmin\erebus*
+
 === Install RP adaptor
 
 ```
@@ -223,7 +239,7 @@ rp_project = video_portal
 Run tests:
 
 ```
-py.test ./tests --rp-launch selene_blog_test
+py.test ./tests
 ```
 
 That's all! Thank you =)

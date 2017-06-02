@@ -468,6 +468,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_report_portal_integration">Report portal integration</a>
 <ul class="sectlevel2">
+<li><a href="#_start_report_portal">Start Report portal</a></li>
 <li><a href="#_install_rp_adaptor">Install RP adaptor</a></li>
 </ul>
 </li>
@@ -788,6 +789,28 @@ Real-time integration allows to manage and track execution status directly from 
 <p><a href="http://reportportal.io/" class="bare">http://reportportal.io/</a></p>
 </div>
 <div class="sect2">
+<h3 id="_start_report_portal">Start Report portal</h3>
+<div class="paragraph">
+<p><a href="https://github.com/reportportal/reportportal" class="bare">https://github.com/reportportal/reportportal</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>curl https://raw.githubusercontent.com/reportportal/reportportal/master/docker-compose.yml -o docker-compose.yml</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>docker-compose up -d</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Check <strong><a href="http://ip:8080" class="bare">http://ip:8080</a></strong></p>
+</div>
+<div class="paragraph">
+<p>login\pass for access: <strong>default\1q2w3e</strong> and <strong>superadmin\erebus</strong></p>
+</div>
+</div>
+<div class="sect2">
 <h3 id="_install_rp_adaptor">Install RP adaptor</h3>
 <div class="listingblock">
 <div class="content">
@@ -810,7 +833,7 @@ rp_project = video_portal</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>py.test ./tests --rp-launch selene_blog_test</code></pre>
+<pre class="highlight"><code>py.test ./tests</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -822,7 +845,7 @@ rp_project = video_portal</code></pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-05-31 21:55:53 EEST
+Last updated 2017-06-02 22:18:31 EEST
 </div>
 </div>
 </body>
